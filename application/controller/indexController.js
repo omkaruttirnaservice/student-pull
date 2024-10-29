@@ -4,7 +4,6 @@ const getMysqlConnection = require("../utils/db.connect.js");
 
 const indexController = {
 	pullStudents: async (req, res, next) => {
-		// const FF_URL = "http://localhost:3565";
 		const FF_URL = "https://https://deogiri.surbanksassociation.in/";
 		let resp = await axios.post(`${FF_URL}/master/students-data/data`, {
 			_reqData: {
