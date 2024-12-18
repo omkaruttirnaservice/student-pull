@@ -4,7 +4,7 @@ const getMysqlConnection = require("../utils/db.connect.js");
 
 const indexController = {
 	pullStudents: async (req, res, next) => {
-		const FF_URL = "https://https://deogiri.surbanksassociation.in/";
+		const FF_URL = "https://102.sznsbal.in/";
 		let resp = await axios.post(`${FF_URL}/master/students-data/data`, {
 			_reqData: {
 				exam_date: null,
@@ -80,7 +80,7 @@ const indexController = {
 						item.sl_added_by_login_id,
 						item.sl_is_live,
 						item.sl_date_of_birth,
-						item.sl_school_name,
+						item.sl_post, // post name for sl_school_name column
 						item.sl_catagory,
 						item.sl_application_number,
 						item.sl_is_physical_handicap,
